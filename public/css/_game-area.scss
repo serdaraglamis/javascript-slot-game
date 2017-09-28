@@ -1,0 +1,94 @@
+.game-content {
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  .slots {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .winType {
+      text-align: center;
+      font-family: 'Bungee Inline', cursive;
+      text-rendering: geometricPrecision;
+      font-size: 40px;
+      color: #fffa00;
+      opacity: 1;
+      -webkit-animation: colorchange 1s infinite linear;
+      animation: colorchange 1s infinite linear;
+
+      @-webkit-keyframes colorchange {
+        50% {
+          color: #fffc6c;
+          opacity: 0.3;
+        }
+      }
+
+      @keyframes colorchange {
+        50% {
+          color: #fffc6c;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    #bonusType {
+      display: none;
+      color: greenyellow;
+      font-weight: bold;
+      margin: 10px;
+      text-align: center;
+      opacity: 1;
+      font-family: 'Bungee Inline', cursive;
+
+      &.active {
+        -webkit-animation: colorchange-bonus 1s infinite linear;
+        animation: colorchange-bonus 1s infinite linear;
+
+        @-webkit-keyframes colorchange-bonus {
+          50% {
+            color: #c7ff00;
+            opacity: 0.3;
+          }
+        }
+
+        @keyframes colorchange-bonus {
+          50% {
+            color: #c7ff00;
+            opacity: 0.3;
+          }
+        }
+        display: block;
+      }
+    }
+  }
+
+  .navigation {
+    text-align: center;
+    margin-top: 20px;
+    .play-button {
+      background-image: url(/button.png);
+      width: 80px;
+      border-radius: 80px;
+      height: 80px;
+      background-position: center;
+      background-size: contain;
+      background-color: transparent;
+      cursor: pointer;
+      &:disabled {
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+}

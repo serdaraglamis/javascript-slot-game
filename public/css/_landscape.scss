@@ -1,0 +1,62 @@
+.mobile-landscape {
+
+  @media (orientation: landscape) and (max-width: 600px) {
+    .header {
+      .logo {
+        width: 120px;
+      }
+    }
+
+    .game-content {
+
+      .slots {
+        .text-board {
+          min-height: 80px !important;
+          .winType {
+            font-size: 25px !important;
+          }
+        }
+        .navigation {
+          transform: translate(-8%, -235%);
+          .play-button {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .machine {
+    transform: scale(0.6);
+  }
+
+  .game-content {
+
+    .slots {
+      padding-top: 10%;
+      width: 100%;
+
+      .text-board {
+        min-height: 100px;
+        margin-bottom: -50px;
+        padding-top: 20px;
+
+        .winType {
+          font-size: 35px;
+        }
+      }
+    }
+
+    .navigation {
+      text-align: right;
+      transform: translate(-10%, -210%);
+    }
+  }
+}

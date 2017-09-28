@@ -1,0 +1,115 @@
+.machine {
+  width: 360px;
+  margin: auto;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #333;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666666), to(#666666), color-stop(.6, #333));
+  border-radius: 10px;
+
+  > div {
+    float: left;
+    width: 100px;
+    margin: 10px;
+    height: 160px;
+    background-color: #FFF;
+    background-position: 0;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, .6)), to(rgba(0, 0, 0, .6)), color-stop(.3, rgba(0, 0, 0, 0)), color-stop(.7, rgba(0, 0, 0, 0))),
+    url("../slot.png");
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #000 inset;
+    box-shadow: 0 0 5px #000 inset;
+
+    -webkit-animation: spin .7s infinite linear;
+    animation: spin .7s infinite linear;
+  }
+
+  &.stop {
+    > div {
+      -webkit-animation: none;
+      animation: none;
+    }
+
+    .selected-0 {
+      background-position: 0px center, 0px 40px;
+    }
+
+    .selected-1 {
+      background-position: 0px center, 0px -50px;
+    }
+
+    .selected-2 {
+      background-position: 0px center, 0px -120px;
+    }
+
+    .selected-3 {
+      background-position: 0px center, 0px -205px;
+    }
+
+    .selected-4 {
+      background-position: 0px center, 0px -285px;
+    }
+
+    .selected-5 {
+      background-position: 0px center, 0px -365px;
+    }
+
+    #a {
+      -webkit-transition: background-position .7s;
+      transition: background-position .7s;
+    }
+
+    #b {
+      -webkit-transition: background-position 1.2s;
+      transition: background-position 1.2s;
+    }
+
+    #c {
+      -webkit-transition: background-position 1.6s;
+      transition: background-position 1.6s;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .machine {
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+
+    > div {
+      background-size: 100%;
+      width: 90px;
+      margin: 5px;
+      height: 100px;
+    }
+
+    &.stop {
+      .selected-0 {
+        background-position: 0 center, 0 13px;
+      }
+
+      .selected-1 {
+        background-position: 0 center, 0px -65px;
+      }
+
+      .selected-2 {
+        background-position: 0 center, 0px -132px;
+      }
+
+      .selected-3 {
+        background-position: 0 center, 0px -205px;
+      }
+
+      .selected-4 {
+        background-position: 0 center, 0px -280px;
+      }
+
+      .selected-5 {
+        background-position: 0 center, 0px -349px;
+      }
+    }
+  }
+
+}
